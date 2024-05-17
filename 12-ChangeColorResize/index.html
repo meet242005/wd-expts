@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="changeBg()">
+    <script>
+        const colors = ['red','orange','blue','green','yellow']
+        let index = 0
+        function changeBg() {
+            document.getElementsByTagName('body')[0].style.backgroundColor = colors[index];
+            index = (index+1)%colors.length
+        }
+    </script>
+</body>
+</html>

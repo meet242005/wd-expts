@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background on Button</title>
+</head>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    button{
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <div>
+        <div id="mydiv" style="background-color: aqua;height: 100px; width: 150px; margin-bottom: 10px;">
+        </div>
+        <button onmouseover="hideDIV()" onmouseout="showDIV()">Hover to Hide Div</button>
+    </div>
+    <script>
+        function hideDIV()
+        {
+            //Why # in mydiv, because mydiv is id and querySelector uses css syntax
+            //i.e #id and .class
+            document.querySelector('#mydiv').style.visibility = "hidden"
+        }
+        function showDIV()
+        {
+    
+            document.querySelector('#mydiv').style.visibility = "visible"
+        }
+    </script>
+</body>
+</html>
+

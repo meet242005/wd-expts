@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background on Button</title>
+</head>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    button{
+        padding: 20px;
+        background-color: white;
+    }
+    button:hover{
+        border: 4px solid black;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <button onmouseover="changeBg()" onmouseout="resetBg()">Change Background</button>
+</body>
+<script>
+    const colors = ['red','orange','blue','green','yellow']
+    let index = 0
+    function changeBg() {
+        document.getElementsByTagName('body')[0].style.backgroundColor = colors[index];
+        index = (index+1)%colors.length
+    }
+    function resetBg() {
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'white';
+    }
+</script>
+</html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css" />
+    <script src="bootstrap-4/js/bootstrap.min.js"></script>
+    <title>Image Carousel</title>
+  </head>
+  <script>
+    function autochange() {
+      setInterval(next, 5000);
+    }
+
+    var images = [
+      "Waves/Deep%20Purple.jpg",
+      "Waves/Dragon%20Red.jpg",
+      "Waves/Forest%20Green.jpg",
+      "Waves/River%20Blue.jpg",
+    ];
+    let current_index = 1;
+
+    function next() {
+      var slideshow = document.getElementById("slide");
+      slideshow.src = images[current_index];
+      current_index++;
+      if (current_index >= images.length) {
+        current_index = 0;
+      }
+    }
+
+    function prev() {
+      var slideshow = document.getElementById("slide");
+      slideshow.src = images[current_index];
+      current_index--;
+      if (current_index < 0) {
+        current_index = images.length - 1;
+      }
+    }
+  </script>
+  <body onload="autochange()">
+    <div class="d-flex flex-row">
+    <button onclick="prev()" class="form-control">Prev</button>
+    <img class="img-thumbnail" style="object-fit: cover;height: 500px;"
+      src="Waves/Deep Purple.jpg"
+      id="slide"
+    
+    
+    />
+    <button onclick="next()" class="form-control">Next</button>
+</div>
+  </body>
+</html>

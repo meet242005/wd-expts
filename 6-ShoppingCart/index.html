@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Product Details using TypeScript</title>
+</head>
+
+<body>
+    <table border="1" id="product_table">
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+        <tr onclick="addToCart(0)">
+            <td>Apple</td>
+        </tr>
+        <tr onclick="addToCart(1)">
+            <td>Mango</td>
+            
+        </tr>
+        <tr onclick="addToCart(2)">
+            <td>Banana</td>
+        </tr>
+    </table>
+    <h2>Cart:</h2>
+    <div id="cart"></div>
+    <script src="script.js"/>   
+</body>
+
+</html>

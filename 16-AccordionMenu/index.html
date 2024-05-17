@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Menu</title>
+</head>
+<style>
+    .menu{
+        background-color: rgb(245, 250, 255);
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+        border: 0.2px solid;
+        box-shadow: 2px 2px 2px 2px rgb(240, 239, 239);
+    }
+    .menu-body{
+        display: none;
+    }
+    
+</style>
+<body>
+    <div class="menu" onclick="expandMenu(0)">
+        <div class="menu-header">
+            <h3>Menu Title</h3>
+        </div>
+        <div class="menu-body">
+            <hr/>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus pariatur provident earum sunt tenetur soluta optio iusto, esse debitis praesentium perspiciatis, ducimus suscipit ab dolores ipsum, aliquid consequatur necessitatibus delectus?</p>
+        </div>
+    </div>
+    <div class="menu" onclick="expandMenu(1)">
+        <div class="menu-header">
+            <h3>Menu Title 2</h3>
+        </div>
+        <div class="menu-body">
+            <hr/>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus pariatur provident earum sunt tenetur soluta optio iusto, esse debitis praesentium perspiciatis, ducimus suscipit ab dolores ipsum, aliquid consequatur necessitatibus delectus?</p>
+        </div>
+    </div>
+    <script>
+        function expandMenu(index) {
+           if( document.getElementsByClassName('menu-body')[index].style.display == "none"){
+            document.getElementsByClassName('menu-body')[index].style.display = "block";
+           } else {
+            document.getElementsByClassName('menu-body')[index].style.display = "none";
+          }
+            
+        }
+    </script>
+</body>
+
+</html>

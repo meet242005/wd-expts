@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <div style="background-color: aliceblue;height: 200px;"></div>
+    <div style="background-color: yellow;height: 200px;"></div>
+    <div style="background-color: greenyellow;height: 200px;"></div>
+    <div style="background-color: orange;height: 200px;"></div>
+    <div style="background-color: pink;height: 200px;"></div>
+
+    </div>
+    <script>
+   
+        addEventListener("scroll",()=>{
+    
+            if (scrollY>(innerHeight/3)) {
+                window.alert("Scrolled Way Too Much")
+                scrollTo(0,0)
+            }
+        })
+    </script>
+</body>
+</html>

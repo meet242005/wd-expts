@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .parent {
+      display: inline-block;
+      position: relative;
+    }
+
+    .mytooltip {
+      visibility: hidden;
+      padding: 2px;
+      border-radius: 10px;
+      background-color: black;
+      width: auto;
+      color: white;
+      position: absolute;
+    }
+    .parent:hover .mytooltip {
+      visibility: visible;
+    }
+  </style>
+  <body>
+    One of the most popular languages used for web development consists of
+    <div class="parent">
+      <u>HTML</u>
+      <div class="mytooltip">HyperText Markup Language</div>
+    </div>
+    and
+    <div class="parent">
+      <u>JS</u>
+      <div class="mytooltip">JavaScript</div>
+    </div>
+  </body>
+</html>

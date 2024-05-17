@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+</head>
+<style>
+    .container{
+        display: flex;
+    }
+    img{
+        padding-right: 5px;
+        width: 33%;
+        height: 150px;
+        opacity: 0.5;
+        transition: opacity 1s;
+    }
+    img:hover{
+        opacity: 1;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <img src="Waves/Deep Purple.jpg" onclick="enlargeImage(this)">
+        <img src="Waves/Espresso.jpg" onclick="enlargeImage(this)">
+        <img src="Waves/Forest Green.jpg" onclick="enlargeImage(this)">
+    </div>
+    <script>
+        function enlargeImage(img) {
+            img.style.width = "50%";
+            img.style.height = "50%";
+            img.style.opacity = 1;
+
+            setTimeout(()=>{
+            img.style.width = "33%";
+            img.style.height = "150px";
+            img.style.opacity = 0.5;
+            },3000)
+        }
+    </script>
+    
+</body>
+</html>
